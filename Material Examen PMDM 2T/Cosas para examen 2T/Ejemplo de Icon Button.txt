@@ -1,0 +1,13 @@
+IconButton(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color.LightGray),
+                onClick = {
+                    homeScreenVM.incrementRounds()
+                }
+            ) {
+                Icon(
+                    imageVector = Icons.Default.KeyboardArrowUp,
+                    contentDescription = "Boton añadir",
+                )
+            }

@@ -1,0 +1,22 @@
+@Composable
+fun LoadingScreen() {
+    // Contenedor centrado en la pantalla
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .wrapContentSize(Alignment.Center)
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            CircularProgressIndicator() // Indicador de carga
+            Spacer(modifier = Modifier.height(16.dp)) // Espacio entre el círculo y el texto
+            Text(
+                text = "Cargando preguntas...",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Gray
+            )
+        }
+    }
+}
